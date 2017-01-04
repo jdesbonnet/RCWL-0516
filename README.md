@@ -1,18 +1,20 @@
 # RCWL-0516 information
 
-Last update: 3 Jan 2017.
+Last update: 3 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
 
-RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. 
+RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
 ![RCWL-0516 board](RCWL-0516-board.jpg)
 
-At the heart of the module is a RCWL-9196. Unfortunately I can't find any datasheets or detailed information about this. The pin out is very similar to the BISS0001 PIR IC.
+At the heart of the module is a RCWL-9196. Unfortunately I can't find any datasheets or detailed information about this. The pin out is very similar to the BISS0001 PIR IC (details below). 
 
 The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html
 
 Operating frequency: 5.8GHz ? I have been unable to verify this. I tried looking for a carrier wave with my HackRF One didn't find any obvious signal.
 
 Working voltage: 4 - 28V. Provides a convenient 3.3V output to drive a MCU (good for 100mA ?).
+
+The forward side of the board is the side with components. This side should face the objects being detected. Do not obstruct forward side with anything metalic. Back side should have clearance of more than 1cm. 
 
 ## Board header
 
@@ -30,7 +32,7 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 ![RCWL-0516 schematic](RCWL-0516-schematic.jpg)
 
-Q1 : looks like a mmbr951M high frequency NPN transistor. 
+Q1 : looks like a mmbr951M high frequency NPN transistor. It is not clear from the schematic how this works. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the reciver. But this board seems very simple. Is all the heavy lifting done in the IC? My 100MHz scope is of no use probing the RF part of this. 
 
 ## RCWL-9196
 
@@ -55,5 +57,13 @@ This is the core IC of the board. The schematic says (in chinese) that it's simi
 | 15 | 1IN- 1st stage Op-amp inverting inpu |
 | 16 | 1OUT 1st stage Op-amp output |
 
+## Adjustment components
 
+On the back of the board (the side without components) are pads for 3 optional components (0603 dimensions?). 
+
+| Pad | Function |
+| --- | --- |
+| C-TM |  Reguate the repeat trigger time. The default (unpopulated) time is 2s. A SMD capacitor to extend the repeat trigger time. Pin 3 of the IC emits a frequency (f), and the tigger time in seconds is given by (1/f) * 32678 |
+| R-GN | The default detection range is 7m, adding a 1M resistor reduces it to 5m |
+| R-CDS| the VCC is in parrel connection with CDS(RCWL-9196 pin 9) through R-CDS. Connect the LDR at the R-CDS to turn off the detecting function at night. (?? TODO: make sense of this) |
 
