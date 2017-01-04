@@ -73,7 +73,7 @@ On the back of the board (the side without components) are pads for 3 optional c
 
 f' = f (c + v) / c
 
-where f = transmit frequency, f' is refelected requency, v = speed of observer (receeding or advancing toward sensor), c = speed of light
+where f = transmit frequency, f' is refelected frequency, v = speed of observer (negative if receeding, positive if advancing toward sensor), c = speed of light
 
 Assume typical human motion speed of 1 m/s. f = 10.525GHz, c = 2.998E8 m/s. f' = 10.525000035GHz. Beat frequency f'-f = 35Hz.
 
