@@ -71,11 +71,15 @@ On the back of the board (the side without components) are pads for 3 optional c
 
 ## Doppler effect calculations
 
-f' = f (c + v) / c
+fr = ft (c + v) / (c - v)     [6]
 
-where f = observer transmit frequency, f' is frequency of signal reflected off target measured by an receive antenna on the transmitter, v = speed of target relative to the observer (negative if receeding, positive if advancing toward observer), c = speed of light
+fd = fr - ft = 2v ft / (c - v)  
 
-Assume typical human motion speed of 1 m/s. f = 10.525GHz, c = 2.998E8 m/s. f' = 10.525000035GHz. Beat frequency f'-f = 35Hz.
+If ( c << v) then fd ≈ 2v ft / c 
+
+where ft = observer transmit frequency, fr is frequency of signal reflected off target measured by an receive antenna on the transmitter, v = speed of target relative to the observer (negative if receeding, positive if advancing toward observer), c = speed of light, fd is the dopper shift (fr - fd).
+
+Assume typical human motion speed of 1 m/s. f = 10.525GHz, c = 2.998E8 m/s: fd = 70Hz.
 
 Adding two sine waves of equal amplitude:
 y(t) = Acos(2πf1t) + Acos(2πf2t) = 2Acos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2)
@@ -96,3 +100,4 @@ http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Senso
 
 [5] http://cache.freescale.com/files/product/doc/MMBR941.pdf
 
+[6] https://en.wikipedia.org/wiki/Doppler_radar
