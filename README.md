@@ -69,6 +69,14 @@ On the back of the board (the side without components) are pads for 3 optional c
 | R-GN | The default detection range is 7m, adding a 1M resistor reduces it to 5m |
 | R-CDS| the VCC is in parrel connection with CDS(RCWL-9196 pin 9) through R-CDS. Connect the LDR at the R-CDS to turn off the detecting function at night. (?? TODO: make sense of this) |
 
+## Doppler effect calculations
+
+f' = f (c + v) / c
+
+where f = transmit frequency, f' is refelected requency, v = speed of observer (receeding or advancing toward sensor), c = speed of light
+
+Assume typical human motion speed of 1 m/s. f = 10.525GHz, c = 2.998E8 m/s. f' = 10.525000035GHz. Beat frequency f'-f = 35Hz.
+
 ## References
 
 [1] http://wiki.seeedstudio.com/images/2/2f/Twig_-_BISS0001.pdf
