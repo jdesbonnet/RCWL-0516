@@ -10,7 +10,7 @@ At the heart of the module is a RCWL-9196 IC. Unfortunately I can't find any dat
 
 The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html
 
-Operating frequency: 5.8GHz ISM band ? I have been unable to verify this. I tried looking for a carrier wave with my HackRF One SDR but didn't find any obvious signal. Another possibility is the X-Band at 10.450GHz, but I have no equipment capable of detecting this (the HackRF One maxes out at 6GHz).
+Operating frequency: I originally assumed 5.8GHz ISM band? but I have been unable to verify this with my HackRF One SDR. Another possibility is the X-Band [3] at 10.450GHz which is common for motion detector doppler radars but I have no equipment capable of detecting this (the HackRF One upper frequency is 6GHz). I found a similar board operating at 10.525GHz [4].
 
 Working voltage: 4 - 28V. It provides a convenient 3.3V output to drive a MCU (good for 100mA ?).
 
@@ -69,11 +69,11 @@ On the back of the board (the side without components) are pads for 3 optional c
 
 ## References
 
-http://wiki.seeedstudio.com/images/2/2f/Twig_-_BISS0001.pdf
+[1] http://wiki.seeedstudio.com/images/2/2f/Twig_-_BISS0001.pdf
 
-http://highfreqelec.summittechmedia.com/Apr07/HFE0407_Polivka.pdf
+[2] http://highfreqelec.summittechmedia.com/Apr07/HFE0407_Polivka.pdf
 
-https://en.wikipedia.org/wiki/X_band
+[3] https://en.wikipedia.org/wiki/X_band
 
-https://www.bestfinds.org/microwave-sensor-module-10-525ghz-s01-type-single-pcb-microwave-radar-motion-sensor-module-for-ceiling-light-sensor-32a9cf9fba6ba68d.html
+[4] https://www.bestfinds.org/microwave-sensor-module-10-525ghz-s01-type-single-pcb-microwave-radar-motion-sensor-module-for-ceiling-light-sensor-32a9cf9fba6ba68d.html
 
