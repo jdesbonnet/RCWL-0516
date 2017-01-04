@@ -34,7 +34,7 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 Q1 looks like MMBR941M high frequency NPN transistor [5]. It is marked "32W" but cannot find any match. It is not clear from the schematic how this works as microwave doppler. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the reflected signal from the receiver. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
 
-My thinking is that Q1 along with the PCB design and passive components form a 10GHz oscillator / antenna. The reflected signal combines additively with the transmitted signal forming a beat frequncy which is the difference of the two frequencies. This beat frequency is extracted by a low pass filter (C9 = 1nF ? / R3 = 1k ?) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
+My thinking is that Q1 along with the PCB design and passive components form a 10GHz oscillator / antenna. The reflected signal combines additively with the transmitted signal forming a beat frequncy which is the difference of the two frequencies. This beat frequency is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
 
 ## RCWL-9196
 
