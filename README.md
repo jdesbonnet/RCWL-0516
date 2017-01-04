@@ -78,10 +78,10 @@ where f = transmit frequency, f' is refelected frequency, v = speed of observer 
 Assume typical human motion speed of 1 m/s. f = 10.525GHz, c = 2.998E8 m/s. f' = 10.525000035GHz. Beat frequency f'-f = 35Hz.
 
 Adding two sine waves of equal amplitude:
-y(t) = A*cos(2π*f1*t) + A*cos(2π*f2*t) = 2*A*cos(2π*t*(f1+f2)/2)*cos(2π*t*(f1-f2)/2)
+y(t) = Acos(2πf1t) + Acos(2πf2t) = 2Acos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2)
 
 Adding two sine waves of unequal amplitude: 
-y(t) = A*cos(2π*f1*t) + B*cos(2π*f2*t) = (A+B)*cos(2π*t*(f1+f2)/2)*cos(2π*t*(f1-f2)/2) + (A-B)*sin(2π*t*(f1+f2)/2)*sin(2π*t*(f1-f2)/2)
+y(t) = Acos(2πf1t) + Bcos(2πf2t) = (A+B)cos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2) + (A-B)sin(2πt(f1+f2)/2)sin(2πt(f1-f2)/2)
 
 ## References
 
