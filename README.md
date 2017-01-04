@@ -32,7 +32,7 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 ![RCWL-0516 schematic](RCWL-0516-schematic.jpg)
 
-Q1 : looks like a mmbr951M high frequency NPN transistor. It is not clear from the schematic how this works. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the signal from the receiver. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
+Q1 : looks like MMBR941M high frequency NPN transistor [5]. It is not clear from the schematic how this works. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the signal from the receiver. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
 
 My thinking is that Q1 along with the PCB design and passive components form a 10GHz oscillator / antenna. The reflected signal combines additively with the transmitted signal forming a beat frequncy which is the difference of the two frequencies. This beat frequency is extracted by a low pass filter (C9 = 1nF ? / R3 = 1k ?) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
 
@@ -94,4 +94,5 @@ y(t) = Acos(2πf1t) + Bcos(2πf2t) = (A+B)cos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2) +
 [4] https://www.bestfinds.org/microwave-sensor-module-10-525ghz-s01-type-single-pcb-microwave-radar-motion-sensor-module-for-ceiling-light-sensor-32a9cf9fba6ba68d.html
 http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Sensor-Module-10-525GHz-Doppler-Radar-Motion-Detector-Arduino-HW-M09-.html
 
+[5] http://cache.freescale.com/files/product/doc/MMBR941.pdf
 
