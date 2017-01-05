@@ -1,6 +1,6 @@
 # RCWL-0516 information
 
-Last update: 3 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
+Last update: 4 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
@@ -10,7 +10,7 @@ At the heart of the module is a RCWL-9196 IC. Unfortunately I can't find any dat
 
 The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html
 
-Operating frequency: The product information omits the operating frequncy. I had assumed the 5.8GHz ISM band, but I was unable to see any signal with my HackRF One SDR. A more likely possibility is the X-Band [3] at around 10GHz which is common for motion detector doppler radars. Unfortunately I have no equipment capable of detecting this (my HackRF One upper frequency is 6GHz). I found a similars boards with similar PCB layouts operating at 10.525GHz [4].
+Operating frequency: The product information omits the operating frequncy. I found a carrier at 3.181GHz using a HackRF One radio.
 
 Working voltage: 4 - 28V. It provides a convenient 3.3V output to drive a MCU (good for 100mA ?).
 
@@ -34,7 +34,13 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 Q1 looks like MMBR941M high frequency NPN transistor [5]. It is marked "32W" but cannot find any match. It is not clear from the schematic how this works as microwave doppler. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the reflected signal from the receiver. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
 
-My thinking is that Q1 along with the PCB design and passive components form a 10GHz oscillator / antenna. The reflected signal combines additively with the transmitted signal forming a beat frequncy which is the difference of the two frequencies. This beat frequency is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
+My thinking is that Q1 along with the PCB design and passive components form a microwave oscillator / antenna. The reflected signal mixes (how? using Q1?)  with the transmitted signal forming a beat frequncy which is the difference of the two frequencies. This beat frequency is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
+
+
+Update 4 Jan 2017: finally found the signal. However something is puzzling me. When I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. Now I was rather close to it maybe 20cm... is this some sort of near field effect separate to the doppler operation? 
+
+![RCWL-0516 spectrum at 3.181GHz](RCWL-0516-spectrum.jpg)
+
 
 ## RCWL-9196
 
@@ -101,3 +107,10 @@ http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Senso
 [5] http://cache.freescale.com/files/product/doc/MMBR941.pdf
 
 [6] https://en.wikipedia.org/wiki/Doppler_radar
+
+[7] https://www.youtube.com/watch?v=jAeFQEHWLZU
+
+
+## Updates
+
+4 Jan 2017: Thanks to tear down review on YouTube [7] I've revaluated the operating frequency.
