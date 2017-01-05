@@ -110,6 +110,9 @@ http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Senso
 
 [7] https://www.youtube.com/watch?v=jAeFQEHWLZU
 
+[8] http://electronics.stackexchange.com/questions/53554/can-we-build-capacitors-on-a-pcb-board
+https://www.jlab.org/accel/eecad/pdf/050rfdesign.pdf
+http://www.qsl.net/va3iul/Microstrip_Stripline_CPW_Design/Microstrip_Stripline_and_CPW_Design.pdf
 
 ## Updates
 
