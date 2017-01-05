@@ -39,7 +39,7 @@ My thinking is that Q1 along with the PCB design and passive components form a m
 
 Update 4 Jan 2017: finally found the signal. However something is puzzling me. When I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. Now I was rather close to it maybe 20cm... is this some sort of near field effect separate to the doppler operation? 
 
-![RCWL-0516 spectrum at 3.181GHz](RCWL-0516-spectrum.jpg)
+![RCWL-0516 spectrum at 3.181GHz](RCWL-0516-spectrum-annotated.jpg)
 
 
 ## RCWL-9196
