@@ -1,6 +1,6 @@
 # RCWL-0516 information
 
-Last update: 4 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
+Last update: 5 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
@@ -32,10 +32,9 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 ![RCWL-0516 schematic annotated](RCWL-0516-schematic-annotated.png)
 
-Q1 looks like MMBR941M high frequency NPN transistor [5]. It is marked "32W" but cannot find any match. It is not clear from the schematic how this works as microwave doppler. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the reflected signal from the receiver. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
+Q1 looks like MMBR941M high frequency NPN transistor [5]. It is marked "32W" but cannot find any match. It is not clear from the schematic how this works as microwave doppler radar. My understanding of a doppler radar is that a continuous wave is transmitted and the reflected signal from the receiver is mixed with the transmitted signal to yield a signal with a frequency that is the difference in frequency between the transmitted and received signal. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
 
-My thinking is that Q1 along with the PCB design and passive components form a microwave oscillator / antenna. The reflected signal mixes (how? using Q1?)  with the transmitted signal forming a beat frequncy which is the difference of the two frequencies. This beat frequency is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
-
+My thinking is that Q1 along with the clever microwave PCB design and passive components form a microwave oscillator / antenna. The reflected signal mixes (how? does Q1 have a dual role for oscillator / mixer?)  with the transmitted signal forming a signal that is the difference in frequency very close to 0Hz. (There will also be a component that's the sum of the two frequencies but that will be lost due to the very high frequency).  This low doppler frequency is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
 
 Update 4 Jan 2017: finally found the signal. However something is puzzling me. When I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. Now I was rather close to it maybe 20cm... is this some sort of near field effect separate to the doppler operation? 
 
@@ -110,7 +109,12 @@ http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Senso
 
 [7] https://www.youtube.com/watch?v=jAeFQEHWLZU
 
+[8] http://electronics.stackexchange.com/questions/53554/can-we-build-capacitors-on-a-pcb-board
+https://www.jlab.org/accel/eecad/pdf/050rfdesign.pdf
+http://www.qsl.net/va3iul/Microstrip_Stripline_CPW_Design/Microstrip_Stripline_and_CPW_Design.pdf
 
 ## Updates
 
 4 Jan 2017: Thanks to tear down review on YouTube [7] I've revaluated the operating frequency.
+
+5 Jan 2017: Added annotated schematic.
