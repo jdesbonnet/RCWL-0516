@@ -114,3 +114,5 @@ http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Senso
 ## Updates
 
 4 Jan 2017: Thanks to tear down review on YouTube [7] I've revaluated the operating frequency.
+
+5 Jan 2017: Added annotated schematic.
