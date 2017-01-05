@@ -28,9 +28,9 @@ The forward side of the board is the side with components. This side should face
 
 ## Schematic
 
-The only schematic I could find is very low resolution and it's hard to make out some of the text.
+The only schematic I could find is very low resolution and it's hard to make out some of the text. However I've been reverse engineering it and adding my annotations.
 
-![RCWL-0516 schematic](RCWL-0516-schematic.jpg)
+![RCWL-0516 schematic annotated](RCWL-0516-schematic-annotated.png)
 
 Q1 looks like MMBR941M high frequency NPN transistor [5]. It is marked "32W" but cannot find any match. It is not clear from the schematic how this works as microwave doppler. My understanding of a doppler radar is that a continuous wave is transmitted and a the transmitted signal is mixed with the reflected signal from the receiver. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
 
