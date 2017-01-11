@@ -58,11 +58,11 @@ This is the core IC of the board. The schematic says (in chinese) that it's simi
 | 9 | VC Trigger disable input (VC > 0.2Vdd=enable; Vc < 0.2Vdd =disabled) | ? |
 | 10 | IB Op-amp input bias current setting                                | ? |
 | 11 | Vdd Supply voltage                                                  | 3.3V regulated output (again?) |
-| 12 | 2OUT 2nd stage Op-amp output                                        | ? |
-| 13 | 2IN- 2nd stage Op-amp inverting input                               | ? |
-| 14 | 1IN+ 1st stage Op-amp non-inverting input                           | ? |
-| 15 | 1IN- 1st stage Op-amp inverting input                               | ? |
-| 16 | 1OUT 1st stage Op-amp output                                        | ? |
+| 12 | 2OUT 2nd stage Op-amp output                                        | same |
+| 13 | 2IN- 2nd stage Op-amp inverting input                               | same |
+| 14 | 1IN+ 1st stage Op-amp non-inverting input                           | same |
+| 15 | 1IN- 1st stage Op-amp inverting input                               | same |
+| 16 | 1OUT 1st stage Op-amp output                                        | same |
 
 ## Adjustment components
 
