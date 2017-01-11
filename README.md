@@ -108,8 +108,12 @@ http://szhaiwang.en.made-in-china.com/product/lvMQxCLJYshG/China-Microwave-Senso
 
 http://www.ebay.com/itm/LV002-10-525GHz-8-15m-Doppler-Radar-Microwave-Sensor-Switch-Module-/262461703972?hash=item3d1befc724:g:39kAAOSwepZXTTSu
 
-Inside another doppler radar microwave LED lamp:
+Inside another doppler radar microwave LED lamp (bigclivedotcom):
 https://www.youtube.com/watch?v=2xHhLbhbb0k
+
+Microwave doppler sensor lamp with perplexingly simple circuitry (bigclivedotcom):
+https://www.youtube.com/watch?v=FgdXRLjYkc4
+
 
 [5] http://cache.freescale.com/files/product/doc/MMBR941.pdf
 
