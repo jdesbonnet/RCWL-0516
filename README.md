@@ -32,18 +32,22 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 ![RCWL-0516 schematic annotated](RCWL-0516-schematic-annotated.png)
 
-Q1 looks like MMBR941M high frequency NPN transistor [5]. It is marked "32W" but cannot find any match. It is not clear from the schematic how this works as microwave doppler radar. My understanding of a doppler radar is that a continuous wave is transmitted and the reflected signal from the receiver is mixed with the transmitted signal to yield a signal with a frequency that is the difference in frequency between the transmitted and received signal. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
+There are two parts to this schematic. A microwave frequency transmitter/receiver/mixer and a much lower frequency part based on an IC (marked RCWL-9196) which is very similar to the BISS0001 IC for PIR motion detectors.
 
-My thinking is that Q1 along with the clever microwave PCB design and passive components form a microwave oscillator / antenna. The reflected signal mixes (how? does Q1 have a dual role for oscillator / mixer?)  with the transmitted signal forming a signal that is the difference in frequency very close to 0Hz. (There will also be a component that's the sum of the two frequencies but that will be lost due to the very high frequency).  This low doppler frequency is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
+First the microwave part:
 
-Update 4 Jan 2017: finally found the signal. However something is puzzling me. When I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. Now I was rather close to it maybe 20cm... is this some sort of near field effect separate to the doppler operation? 
+The Q1 the package is marked "32W" and seems to be a MMBR941M high frequency NPN transistor [5]. I haven't been able to match the marking "32W" with a specific manufacturer. It is not clear from the schematic how this works as microwave doppler radar. My understanding of a doppler radar is that a continuous wave is transmitted and the reflected signal from the receiver is mixed with the transmitted signal to yield a signal with a frequency that is the difference in frequency between the transmitted and received signal. But this board seems very simple with just one transistor (Q1) and just a hand full of passive componetents. 
+
+My thinking is that Q1 along with the clever microwave PCB design and passive components form a microwave oscillator / antenna. The reflected signal mixes (how? does Q1 have a dual role for oscillator / mixer?)  with the transmitted signal forming a signal that is the difference in frequency very close to 0Hz. (There will also be a component that's the sum of the two frequencies but that will be lost due to the very high frequency).  This low doppler frequency difference is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC. I'm not a RF expert so this is purely speculative. 
+
+Update 4 Jan 2017: finally found the signal at 3.181GHz with the HackRF One SDR! However something is puzzling me: when I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. I expected the frequency to remain constant. I suspect this is a side effect of the exteme simplicity of this circuit: the reflected doppler shifted signal is causing the transmitter oscillator to vary in frequency.
 
 ![RCWL-0516 spectrum at 3.181GHz](RCWL-0516-spectrum-annotated.jpg)
 
 
 ## RCWL-9196
 
-This is the core IC of the board. The schematic says (in chinese) that it's similar to a BISS0001 PIR IC. But there are differences. Unfortunately I can't find any hard information (eg datasheet) on this. Nor can I find any information on the brand/company name "RCWL". 
+The schematic says (in chinese) that it's similar to a BISS0001 PIR IC. But there are differences. Unfortunately I can't find any hard information (eg datasheet) on this. Nor can I find any information on the brand/company name "RCWL". 
 
 | Pin number | BISS0001 | RCWL-9196 |
 | --- | --- | --- |
