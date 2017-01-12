@@ -130,10 +130,14 @@ http://www.qsl.net/va3iul/Microstrip_Stripline_CPW_Design/Microstrip_Stripline_a
 US5227667A: Microwave proximity switch 
 https://patents.google.com/patent/US5227667A
 
+## Credits
+
+Thanks to [IC Station](https://www.icstation.com/) who provided a module for evaluation. The module evaluated here can be [ordered from their site](http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html). There are many [similar modules in their catalog](http://www.icstation.com/advanced_search_result.php?keywords=microwave&search_in_description=1)
+
 ## Updates
 
 4 Jan 2017: Thanks to tear down review on YouTube [7] I've revaluated the operating frequency.
 
 5 Jan 2017: Added annotated schematic.
 
-12 Jan 2017: Added links to related microwave proximity switch activated LED bulbes. Added section for related patents.
+12 Jan 2017: Added links to related microwave proximity switch activated LED bulbes. Added section for related patents and credits.
