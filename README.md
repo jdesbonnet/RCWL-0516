@@ -1,6 +1,6 @@
 # RCWL-0516 information
 
-Last update: 5 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
+Last update: 12 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
@@ -100,7 +100,7 @@ y(t) = Acos(2πf1t) + Bcos(2πf2t) = (A+B)cos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2) +
 
 [3] https://en.wikipedia.org/wiki/X_band
 
-[4] Similar modules:
+[4] Links to similar modules:
 
 https://www.bestfinds.org/microwave-sensor-module-10-525ghz-s01-type-single-pcb-microwave-radar-motion-sensor-module-for-ceiling-light-sensor-32a9cf9fba6ba68d.html
 
@@ -125,8 +125,15 @@ https://www.youtube.com/watch?v=FgdXRLjYkc4
 https://www.jlab.org/accel/eecad/pdf/050rfdesign.pdf
 http://www.qsl.net/va3iul/Microstrip_Stripline_CPW_Design/Microstrip_Stripline_and_CPW_Design.pdf
 
+## Patents
+
+US5227667A: Microwave proximity switch 
+https://patents.google.com/patent/US5227667A
+
 ## Updates
 
 4 Jan 2017: Thanks to tear down review on YouTube [7] I've revaluated the operating frequency.
 
 5 Jan 2017: Added annotated schematic.
+
+12 Jan 2017: Added links to related microwave proximity switch activated LED bulbes. Added section for related patents.
