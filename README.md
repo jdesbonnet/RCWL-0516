@@ -8,7 +8,7 @@ RCWL-0516 is a doppler radar microwave motion sensor module which can act as an 
 
 At the heart of the module is a RCWL-9196 IC. Unfortunately I can't find any datasheets or detailed information about this. The pin out is very similar to the BISS0001 PIR IC (details below). 
 
-The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html
+The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html  (Use coupon code 'joeics' for a 15% discount).
 
 Operating frequency: The product information omits the operating frequncy. I found a carrier at 3.181GHz using a HackRF One radio.
 
@@ -150,7 +150,7 @@ https://patents.google.com/patent/CN101738640A/en
 
  * [IC Station](https://www.icstation.com/) who provided a module for evaluation. The module evaluated here can be [ordered from their site](http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html). Use coupon code 'joeics' for a 15% discount. There are many [similar modules in their catalog](http://www.icstation.com/advanced_search_result.php?keywords=microwave&search_in_description=1)  Disclosure: this module was provided to me free of charge in exchange for a review / blog post etc. (value US $1.34). 
 
- * Thomas Peng Pan for help with translation of the Chinese text on the schematic.
+ * [Thomas Peng Pan](http://www.mobile-chinese.com/blog/) for help with translation of the Chinese text on the schematic.
 
 ## Updates
 
