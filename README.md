@@ -1,6 +1,6 @@
 # RCWL-0516 information
 
-Last update: 12 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
+Last update: 13 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
@@ -134,6 +134,18 @@ http://www.qsl.net/va3iul/Microstrip_Stripline_CPW_Design/Microstrip_Stripline_a
 US5227667A: Microwave proximity switch 
 https://patents.google.com/patent/US5227667A
 
+CN203352555U: Doppler microwave radar inductive switch 
+https://www.google.com/patents/CN203352555U?cl=en
+
+CN203434265U (also US20150236403A1, WO2014169502A1, EP3091605A1) : Planar antenna microwave module and intelligent control energy-saving lamp 
+https://patents.google.com/patent/CN203434265U/en
+https://patents.google.com/patent/US20150236403A1/en
+https://patents.google.com/patent/WO2014169502A1/en
+https://patents.google.com/patent/EP3091605A1/en
+
+CN101738640A: Induction module of microwave motion sensor
+https://patents.google.com/patent/CN101738640A/en
+
 ## Credits
 
  * [IC Station](https://www.icstation.com/) who provided a module for evaluation. The module evaluated here can be [ordered from their site](http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html). There are many [similar modules in their catalog](http://www.icstation.com/advanced_search_result.php?keywords=microwave&search_in_description=1)
@@ -147,3 +159,5 @@ https://patents.google.com/patent/US5227667A
 5 Jan 2017: Added annotated schematic.
 
 12 Jan 2017: Added links to related microwave proximity switch activated LED bulbes. Added section for related patents and credits.
+
+13 Jan 2017: Added links to more relevant patents.
