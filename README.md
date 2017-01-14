@@ -81,21 +81,15 @@ On the back of the board (the side without components) are pads for 3 optional c
 
 ## Doppler effect calculations
 
-fr = ft (c + v) / (c - v)     [6]
+If ft is the transmitted frequency, fr is the reflected frequency (as measured by the common transmit/receive antenna on the sensor), v is the speed of the target relative to the sensor  (negative if receeding, positive if advancing toward sensor), c is the speed of light and fd = (fr-fd) is the doppler shift, then:
+
+fr = ft (c + v) / (c - v)
 
 fd = fr - ft = 2v ft / (c - v)  
 
 If ( c << v) then fd ≈ 2v ft / c 
 
-where ft = observer transmit frequency, fr is frequency of signal reflected off target measured by an receive antenna on the transmitter, v = speed of target relative to the observer (negative if receeding, positive if advancing toward observer), c = speed of light, fd is the dopper shift (fr - fd).
-
-Assume typical human motion speed of 1 m/s. f = 10.525GHz, c = 2.998E8 m/s: fd = 70Hz.
-
-Adding two sine waves of equal amplitude:
-y(t) = Acos(2πf1t) + Acos(2πf2t) = 2Acos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2)
-
-Adding two sine waves of unequal amplitude: 
-y(t) = Acos(2πf1t) + Bcos(2πf2t) = (A+B)cos(2πt(f1+f2)/2)cos(2πt(f1-f2)/2) + (A-B)sin(2πt(f1+f2)/2)sin(2πt(f1-f2)/2)
+Assume typical human motion speed of v = 1 m/s. ft = 3.181GHz, c = 2.998E8 m/s, then fd = 10Hz.
 
 ## References
 
