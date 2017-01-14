@@ -6,11 +6,9 @@ RCWL-0516 is a doppler radar microwave motion sensor module which can act as an 
 
 ![RCWL-0516 board](RCWL-0516-board.jpg)
 
-At the heart of the module is a RCWL-9196 IC. Unfortunately I can't find any datasheets or detailed information about this. The pin out is very similar to the BISS0001 PIR IC (details below). 
-
 The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html  (Use coupon code 'joeics' for a 15% discount).
 
-Operating frequency: The product information omits the operating frequncy. I found a carrier at 3.181GHz using a HackRF One radio.
+Operating frequency: The product specification omits the operating frequncy. I found a carrier at 3.181GHz on my unit using a HackRF One SDR radio (see spectrum plot below). I suspect this frequency will vary from device to device: it would be difficult to have a tight specification with such a simple RF circuit on FR4 PCB.
 
 Working voltage: 4 - 28V. It provides a convenient 3.3V output to drive a MCU (good for 100mA ?).
 
@@ -32,7 +30,7 @@ The only schematic I could find is very low resolution and it's hard to make out
 
 ![RCWL-0516 schematic annotated](RCWL-0516-schematic-annotated.png)
 
-There are two parts to this schematic. A microwave frequency transmitter/receiver/mixer and a much lower frequency part based on an IC (marked RCWL-9196) which is very similar to the BISS0001 IC for PIR motion detectors.
+There are two parts to this schematic. A microwave frequency transmitter/receiver/mixer and a much lower frequency part based on an IC (marked RCWL-9196) which is very similar to the BISS0001 IC used in PIR motion detectors.
 
 First the microwave part:
 
@@ -77,6 +75,9 @@ On the back of the board (the side without components) are pads for 3 optional c
 | C-TM |  Reguate the repeat trigger time. The default (unpopulated) time is 2s. A SMD capacitor to extend the repeat trigger time. Pin 3 of the IC emits a frequency (f), and the tigger time in seconds is given by (1/f) * 32678 |
 | R-GN | The default detection range is 7m, adding a 1M resistor reduces it to 5m |
 | R-CDS| the VCC is in parrel connection with CDS(RCWL-9196 pin 9) through R-CDS. Connect the LDR at the R-CDS to turn off the detecting function at night. (?? TODO: make sense of this) |
+
+## Regulatory compliance
+[TODO] 
 
 ## Doppler effect calculations
 
@@ -148,7 +149,7 @@ https://patents.google.com/patent/CN101738640A/en
 
 ## Credits
 
- * [IC Station](https://www.icstation.com/) who provided a module for evaluation. The module evaluated here can be [ordered from their site](http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html). Use coupon code 'joeics' for a 15% discount. There are many [similar modules in their catalog](http://www.icstation.com/advanced_search_result.php?keywords=microwave&search_in_description=1)  Disclosure: this module was provided to me free of charge in exchange for a review / blog post etc. (value US $1.34). 
+ * [IC Station](https://www.icstation.com/) who provided a module for evaluation. The module evaluated here can be [ordered from their site](http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html). Use coupon code 'joeics' for a 15% discount. There are many [similar modules in their catalog](http://www.icstation.com/advanced_search_result.php?keywords=microwave&search_in_description=1).  Disclosure: this module was provided to me free of charge in exchange for a review / blog post etc. (value US $1.34). 
 
  * [Thomas Peng Pan](http://www.mobile-chinese.com/blog/) for help with translation of the Chinese text on the schematic.
 
