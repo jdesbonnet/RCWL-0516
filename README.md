@@ -79,6 +79,11 @@ On the back of the board (the side without components) are pads for 3 optional c
 | R-GN | The default detection range is 7m, adding a 1M resistor reduces it to 5m |
 | R-CDS| the VCC is in parrel connection with CDS(RCWL-9196 pin 9) through R-CDS. Connect the LDR at the R-CDS to turn off the detecting function at night. (?? TODO: make sense of this) |
 
+## Spice simulation
+
+I haven't been able to simulate the exact circuit above (yet). I've started with an example Colpitt circuit [9] and substituted the 2N3904 NPN with a MMBR941 (Spice model from [10]). I am using the Windows LTSpice from Linear Technologies (available as free download [11], also works with Linux under Wine emulator).
+See [colpitt.asc](./spice/colpitt.asc).
+
 ## Regulatory compliance
 [TODO] 
 
@@ -128,6 +133,15 @@ https://www.youtube.com/watch?v=FgdXRLjYkc4
 [8] http://electronics.stackexchange.com/questions/53554/can-we-build-capacitors-on-a-pcb-board
 https://www.jlab.org/accel/eecad/pdf/050rfdesign.pdf
 http://www.qsl.net/va3iul/Microstrip_Stripline_CPW_Design/Microstrip_Stripline_and_CPW_Design.pdf
+
+[9] Colpitts Oscillator Practical Project
+http://www.learnabout-electronics.org/Oscillators/osc24.php
+
+[10] MMBR941 Spice Model
+http://ltwiki.org/files/LTspiceIV/Vendor%20List/Motorola/Spice/RFBJT/MMBR941.lib
+
+[11] LTSpice
+http://www.linear.com/designtools/software/#LTspice
 
 ## Patents
 
