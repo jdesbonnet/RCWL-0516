@@ -84,6 +84,8 @@ On the back of the board (the side without components) are pads for 3 optional c
 I haven't been able to simulate the exact circuit above (yet). I've started with an example Colpitt circuit [9] and substituted the 2N3904 NPN with a MMBR941 (Spice model from [10]). I am using the Windows LTSpice from Linear Technologies (available as free download [11], also works with Linux under Wine emulator).
 See [colpitt.asc](./spice/colpitt.asc).
 
+![Colpitt oscillator simulation running at about 3GHz](./images/colpitt-ltspice-screenshot.png)
+
 ## Regulatory compliance
 [TODO] 
 
