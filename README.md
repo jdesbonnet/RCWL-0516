@@ -4,7 +4,7 @@ Last update: 13 Jan 2017. Please send and feedback, corrections to jdesbonnet@gm
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
-![RCWL-0516 board](RCWL-0516-board.jpg)
+![RCWL-0516 board](./images/RCWL-0516-board.jpg)
 
 The unit I have was supplied by IC station (SKU 10630): http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html  (Use coupon code 'joeics' for a 15% discount).
 
@@ -28,7 +28,7 @@ The forward side of the board is the side with components. This side should face
 
 The only schematic I could find is very low resolution and it's hard to make out some of the text. However I've been reverse engineering it and adding my annotations.
 
-![RCWL-0516 schematic annotated](RCWL-0516-schematic-annotated.png)
+![RCWL-0516 schematic annotated](./images/RCWL-0516-schematic-annotated.png)
 
 There are two parts to this schematic. A microwave frequency transmitter/receiver/mixer and a much lower frequency part based on an IC (marked RCWL-9196) which is very similar to the BISS0001 IC used in PIR motion detectors.
 
@@ -44,7 +44,7 @@ The low doppler frequency difference is extracted by a low pass RC filter (C9 = 
 
 Update 4 Jan 2017: finally found the signal at 3.181GHz with the HackRF One SDR! However something is puzzling me: when I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. I expected the frequency to remain constant. I suspect this is a side effect of the exteme simplicity of this circuit: the reflected doppler shifted signal is causing the transmitter oscillator to vary in frequency.
 
-![RCWL-0516 spectrum at 3.181GHz](RCWL-0516-spectrum-annotated.jpg)
+![RCWL-0516 spectrum at 3.181GHz](./images/RCWL-0516-spectrum-annotated.jpg)
 
 The low frequncy part
 
