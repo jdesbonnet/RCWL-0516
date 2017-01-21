@@ -36,7 +36,7 @@ First the microwave part:
 
 The best explanation of how the microwave part of this works is in patent [EP3091605A1](https://patents.google.com/patent/EP3091605A1/en). It describes as similar type of module operating at 5.8GHz.
 
-At the heart of the RF is a Q1 a MMBR941M high frequency NPN transistor [5] in what is probably a [Colpitt oscillator](https://en.wikipedia.org/wiki/Colpitts_oscillator) [6] configuration. The schematic above is misleading because it omits a key inductor and capacitors constructed from PCB traces (a microline inductor and capacitor). The inductor is the S curve trace on the top surface and capacitors are the ring structure on the bottom surface and also the rectangular block to the left of the S curve. 
+At the heart of the RF is a Q1 a MMBR941M high frequency NPN transistor [5] in what is probably a [Colpitt oscillator](https://en.wikipedia.org/wiki/Colpitts_oscillator) [6] configuration. The schematic above is misleading because it omits a key inductor and capacitors constructed from PCB traces (a microline inductor and capacitor). The inductor is the S curve trace on the top surface and capacitors are the ring structure on the bottom surface and also the rectangular block to the left of the S curve. Using the formula at reference [12] below I calculte the inductance of the S curve to be (very approximately) 10nH.
 
 A critical function of a doppler radar is to be able to 'mix' the reflected signal with the transmitted signal to arrive at a frequency which is the difference between the transmitted and reflected signal. In this board Q1 also cleverly assumes the function of the mixer: [TODO: this really needs to be explained].
  
@@ -144,6 +144,9 @@ http://ltwiki.org/files/LTspiceIV/Vendor%20List/Motorola/Spice/RFBJT/MMBR941.lib
 
 [11] LTSpice
 http://www.linear.com/designtools/software/#LTspice
+
+[12]
+http://coil32.net/meandr-pcb-coil.html
 
 ## Patents
 
