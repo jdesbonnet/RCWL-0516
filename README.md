@@ -42,7 +42,7 @@ A critical function of a doppler radar is to be able to 'mix' the reflected sign
  
 The low doppler frequency difference is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC and treated exactly the same as a signal from a PIR sensor. 
 
-Update 4 Jan 2017: finally found the signal at 3.181GHz with the HackRF One SDR! However something is puzzling me: when I wave my hand in front of the sensor the frequency shifts by up to 1 MHz. I expected the frequency to remain constant. I suspect this is a side effect of the exteme simplicity of this circuit: the reflected doppler shifted signal is causing the transmitter oscillator to vary in frequency.
+Update 4 Jan 2017: finally found the signal at 3.181GHz with the HackRF One SDR! One interesting observation: waving my hand in front of the sensor causes significant changes in the transmitting frequency, shifting by up to 1MHz. My theory: the low frequency doppler shift causes small changes in the transistor base bias. I've verified with spice simulations that changes to base bias voltage changes the oscillation frequency. By running a few simulations I estimate that 1µV change in bias will change oscillation frequncy by 1.4MHz.
 
 ![RCWL-0516 spectrum at 3.181GHz](./images/RCWL-0516-spectrum-annotated.jpg)
 
