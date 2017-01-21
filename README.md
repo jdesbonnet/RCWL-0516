@@ -1,6 +1,6 @@
 # RCWL-0516 information
 
-Last update: 13 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
+Last update: 21 Jan 2017. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the issue tracker.
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
@@ -177,3 +177,5 @@ https://patents.google.com/patent/CN101738640A/en
 12 Jan 2017: Added links to related microwave proximity switch activated LED bulbes. Added section for related patents and credits.
 
 13 Jan 2017: Added links to more relevant patents.
+
+21 Jan 2017: Added section on Spice simulation of the circuit.
