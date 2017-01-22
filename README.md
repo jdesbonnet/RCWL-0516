@@ -42,7 +42,7 @@ A critical function of a doppler radar is to be able to 'mix' the reflected sign
  
 The low doppler frequency difference is extracted by a low pass RC filter (C9 = 1nF, R3 = 1k, fc = 1/2πRC ≈ 160kHz) and amplified by the RCWL-9196 IC and treated exactly the same as a signal from a PIR sensor. 
 
-Update 4 Jan 2017: finally found the signal at 3.181GHz with the HackRF One SDR! One interesting observation: waving my hand in front of the sensor causes significant changes in the transmitting frequency, shifting by up to 1MHz. My theory: the low frequency doppler shift causes small changes in the transistor base bias. I've verified with spice simulations that changes to base bias voltage changes the oscillation frequency. By running a few simulations I estimate that 1µV change in bias will change oscillation frequncy by 1.4MHz.
+Update 4 Jan 2017: finally found the signal at 3.181GHz with the HackRF One SDR! One interesting observation: waving my hand in front of the sensor causes significant changes in the transmitting frequency, shifting by up to 1MHz. My theory: the low frequency doppler shift causes small changes in the transistor base bias. I used spice simulations to verify that small changes to transistor base bias causes changes in oscillation frequency. By running a few simulations I estimate that 1µV change in bias will change oscillation frequncy by 1.4MHz.
 
 ![RCWL-0516 spectrum at 3.181GHz](./images/RCWL-0516-spectrum-annotated.jpg)
 
@@ -81,8 +81,8 @@ On the back of the board (the side without components) are pads for 3 optional c
 
 ## Spice simulation
 
-I haven't been able to simulate the exact circuit above (yet). I've started with an example Colpitt circuit [9] and substituted the 2N3904 NPN with a MMBR941 (Spice model from [10]). I am using the Windows LTSpice from Linear Technologies (available as free download [11], also works with Linux under Wine emulator).
-See [colpitt.asc](./spice/colpitt.asc).
+I started with an example Colpitt circuit [9] and substituted the 2N3904 NPN with a MMBR941 (Spice model from [10]). I am using the Windows LTSpice from Linear Technologies (available as free download [11], also works with Linux under Wine emulator).
+See [colpitt.asc](./spice/colpitt.asc) for a working Colpitt oscillator and [rcwl-0516.asc](./spice/rcwl-0516.asc) for a model of the RCWL-0516 (however it does not oscillate!).
 
 ![Colpitt oscillator simulation running at about 3GHz](./images/colpitt-ltspice-screenshot.png)
 
