@@ -171,7 +171,20 @@ https://patents.google.com/patent/CN101738640A/en
 
  * [Thomas Peng Pan](http://www.mobile-chinese.com/blog/) for help with translation of the Chinese text on the schematic.
 
+## Other links, articles and contributions
+
+
+From: Roger Clarke ( https://github.com/rogerclarkmelbourne ) 
+
+http://www.rogerclark.net/investigating-a-rcwl-9196-rcwl-0516-radar-motion-detector-modules/
+
+Please check the GitHub issue tracker for the most recent contributions/observations: https://github.com/jdesbonnet/RCWL-0516/issues
+
+
+
 ## Updates
+
+18 June 2017: New section 'Other Links and Articles' 
 
 4 Jan 2017: Thanks to tear down review on YouTube [7] I've revaluated the operating frequency.
 
