@@ -22,7 +22,7 @@ The forward side of the board is the side with components. This side should face
 | GND   | Ground                                                |
 | OUT   | Trigger: high (3.3V) if motion detected. 0V normally. |
 | VIN   | 4 - 28V supply voltage                                |
-| CDS   |    (light sensor related.. TODO)                        |
+| CDS   | LDR 10-20k RL, U_LDR > 0.7V = On                      |
 
 ## Schematic
 
