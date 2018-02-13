@@ -29,8 +29,8 @@ The forward side of the board is the side with components. This side should face
 ![RCWL-0516 schematic provided by John Taylor, page 1](./doc/john_taylor_rcwl-0516-0.png)
 ![RCWL-0516 schematic provided by John Taylor, page 2](./doc/john_taylor_rcwl-0516-1.png)
 
-Schematics contributed by ![John Taylor](https://www.tayloredge.com/). Original PDF file
-![here](https://www.tayloredge.com/reference/Electronics/RF/0242.pdf)
+Schematics contributed by [John Taylor](https://www.tayloredge.com/). Original PDF file
+[here](https://www.tayloredge.com/reference/Electronics/RF/0242.pdf).
 
 There are two parts to this circuit: 1. A microwave frequency transmitter/receiver/mixer and 2.a much lower frequency part based on an IC (marked RCWL-9196) which is very similar to the BISS0001 IC used in PIR motion detectors.
 
