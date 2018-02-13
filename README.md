@@ -29,6 +29,9 @@ The forward side of the board is the side with components. This side should face
 ![RCWL-0516 schematic provided by John Taylor, page 1](./doc/john_taylor_rcwl-0516-0.png)
 ![RCWL-0516 schematic provided by John Taylor, page 2](./doc/john_taylor_rcwl-0516-1.png)
 
+Schematics contributed by ![John Taylor](https://www.tayloredge.com/). Original PDF file
+![here](https://www.tayloredge.com/reference/Electronics/RF/0242.pdf)
+
 There are two parts to this circuit: 1. A microwave frequency transmitter/receiver/mixer and 2.a much lower frequency part based on an IC (marked RCWL-9196) which is very similar to the BISS0001 IC used in PIR motion detectors.
 
 First the microwave part:
@@ -165,6 +168,8 @@ CN101738640A: Induction module of microwave motion sensor
 https://patents.google.com/patent/CN101738640A/en
 
 ## Credits
+
+ * [John Taylor](https://www.tayloredge.com/) for the clean schematics.
 
  * [IC Station](https://www.icstation.com/) who provided a module for evaluation. The module evaluated here can be [ordered from their site](http://www.icstation.com/rcwl-0516-microwave-motion-sensor-module-radar-sensor-body-induction-module-100ma-p-10630.html). Use coupon code 'joeics' for a 15% discount. There are many [similar modules in their catalog](http://www.icstation.com/advanced_search_result.php?keywords=microwave&search_in_description=1).  Disclosure: this module was provided to me free of charge in exchange for a review / blog post etc. (value US $1.34). 
 
