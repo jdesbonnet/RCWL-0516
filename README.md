@@ -180,9 +180,12 @@ http://www.rogerclark.net/investigating-a-rcwl-9196-rcwl-0516-radar-motion-detec
 
 Please check the GitHub issue tracker for the most recent contributions/observations: https://github.com/jdesbonnet/RCWL-0516/issues
 
-
+Might higher quality schematic from John Taylor (https://electronics.stackexchange.com/users/173758/john-taylor) here:
+https://www.tayloredge.com/reference/Electronics/RF/0242.pdf
 
 ## Updates
+
+13 Feb 2018: Added link to high quality schematics by John Taylor ( https://www.tayloredge.com/reference/Electronics/RF/0242.pdf )
 
 18 June 2017: New section 'Other Links and Articles' 
 
