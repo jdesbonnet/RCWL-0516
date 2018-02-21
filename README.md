@@ -14,7 +14,7 @@ Working voltage: 4 - 28V. It provides a convenient 3.3V output to drive a MCU (g
 
 The forward side of the board is the side with components. This side should face the objects being detected. Do not obstruct forward side with anything metalic. The back side should have clearance of more than 1cm from any metal. 
 
-The board has the option to attach a cadmium disulphide ("CDS" on the board) light dependent resistor to disable the output when it is light, for when the board is used to control lighting. Attach from CDS to ground. Pin 9 is pulled up (=output enable) by a 1M resistor. Attaching the optional CDS light dependent resistor will pull  pin 9 down (=output disable) when it is _light_ -> the LDR's resistance drops. If the "dark" resistance of the LDR pulls pin 9 <0.7V then the chip will always be disabled; R-CDS allows you to add a resistance in parallel with the onboard 1M pullup to adjust the light level at which pin 9 is pulled <0.7V.
+The board has the option to attach a cadmium disulphide ("CDS" on the board) light dependent resistor to disable the output when it is light, for when the board is used to control lighting. Pin 9 is pulled up (=output enable) by a 1M resistor. Attaching the optional CDS LDR will pull pin 9 down (=output disable) when it is _light_ (i.e. the LDR's resistance drops below ~269k assuming no resistor R-CDS installed). R-CDS allows you to add a resistance in parallel with the onboard 1M pullup to adjust the light level at which pin 9 is pulled <0.7V. [See below for equation for choosing RCDS value](#adjustment-components).
 
 ## Board header
 
@@ -79,7 +79,7 @@ On the back of the board (the side without components) are pads for 3 optional c
 | --- | --- |
 | C-TM |  Regulate the repeat trigger time. The default (unpopulated) time is 2s. A SMD capacitor to extend the repeat trigger time. Pin 3 of the IC emits a frequency (f), and the tigger time in seconds is given by (1/f) * 32678 |
 | R-GN | The default detection range is 7m, adding a 1M resistor reduces it to 5m |
-| R-CDS| Adding resistance here increases the brightness of light required to disable the output. Given `R_dark` as "the maximum resistance of the LDR when the light level is high enough that you wish to disable the output", then `R-CDS = 1/(1/(R_dark/(0.7/3.3))) - 1E-6` |
+| [R-CDS]() | Resistor in parallel with the 1M pullup. Without `R-CDS`, the lowest resistance of the LDR (i.e. highest light level) where the output is enabled is ~269kΩ (=0.7V on pin 9). Adding resistance here decreases the LDR resistance of the enable/disable threshold. If the LDR resistance at the desired light level threshold is <269k then you could add an external resistor in series with the LDR. [Spreadsheet for calculating R-CDS or series resistor value based on LDR resistance at light level threshold](https://docs.google.com/spreadsheets/d/1hRlcTTwTvDfEqkAmPc8_iVrJrOx2lQsg6Prvi2JltOA/edit#gid=0). ![R_CDS = 1 / ( 1/1M - 1/(2.6V/(0.7V/R_LDR > 269k)) ) = 1 / ( 1/1M - .269231/R_LDR )](https://latex.codecogs.com/gif.latex?R_%7BCDS%7D%3D%5Cfrac%7B1%7D%7B%20%5Cfrac%7B1%7D%7B1M%5COmega%7D%20-%20%5Cfrac%7B0.269231%7D%7BR_%7BLDR%7D%5C%2C%3E%5C%2C269k%5COmega%7D%20%7D) |
 
 ## Spice simulation
 
