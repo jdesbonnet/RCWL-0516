@@ -1,6 +1,6 @@
 # RCWL-0516 information
 
-Last update: 2018-02-13. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the GitHub project issue tracker.
+Last update: 2018-08-21. Please send and feedback, corrections to jdesbonnet@gmail.com or post to the GitHub project issue tracker.
 
 RCWL-0516 is a doppler radar microwave motion sensor module which can act as an alternative to a PIR motion sensor. This git repository is an attempt to collect the rather scant information on this board in one place.
 
@@ -187,8 +187,14 @@ Please check the GitHub issue tracker for the most recent contributions/observat
 Might higher quality schematic from John Taylor (https://electronics.stackexchange.com/users/173758/john-taylor) here:
 https://www.tayloredge.com/reference/Electronics/RF/0242.pdf
 
+This video from [The Signal Path](https://www.youtube.com/user/TheSignalPathBlog/featured) explains the operation of a similar module (CDM324) in great detail:  https://www.youtube.com/watch?v=5vqSX40seqA
+
+
 ## Updates
 
+21 Aug 2018: Added link to The Signal Path video explaing operation of similar module:
+ https://www.youtube.com/watch?v=5vqSX40seqA
+ 
 13 Feb 2018: Added link to high quality schematics by John Taylor ( https://www.tayloredge.com/reference/Electronics/RF/0242.pdf )
 
 18 June 2017: New section 'Other Links and Articles' 
