@@ -54,7 +54,7 @@ The core of the low frequncy signal processing is an IC marked RCWL-9196. The sc
 
 | Pin number | BISS0001 | RCWL-9196 |
 | --- | --- | --- |
-| 1 | A Retriggerable & non-retriggerable mode select (A=1 : re-triggerable) | 3.3V regulated output (100mA max?) |
+| 1 | A Retriggerable & non-retriggerable mode select (A=1 : re-triggerable) | same |
 | 2 | VO Detector output pin (active high) | same |
 | 3 | RR1 Output pulse width control (Tx)  | same? |
 | 4 | RC1 Output pulse width control (Tx)  | same? |
@@ -64,7 +64,7 @@ The core of the low frequncy signal processing is an IC marked RCWL-9196. The sc
 | 8 | VRF RESET & voltage reference input (Normally high. Low=reset) |  Vin (4 - 28V) |
 | 9 | VC Trigger disable input (VC > 0.2Vdd=enable; Vc < 0.2Vdd =disabled) | same |
 | 10 | IB Op-amp input bias current setting                                | ? |
-| 11 | Vdd Supply voltage                                                  | 3.3V regulated output (again?) |
+| 11 | Vdd Supply voltage                                                  | 3.3V regulated output (100mA max?) |
 | 12 | 2OUT 2nd stage Op-amp output                                        | same |
 | 13 | 2IN- 2nd stage Op-amp inverting input                               | same |
 | 14 | 1IN+ 1st stage Op-amp non-inverting input                           | same |
