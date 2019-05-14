@@ -175,7 +175,7 @@ https://patents.google.com/patent/CN101738640A/en
 
  * [Thomas Peng Pan](http://www.mobile-chinese.com/blog/) for help with translation of the Chinese text on the schematic.
 
-## Other links, articles and contributions
+## Other videos, articles, links etc
 
 
 From: Roger Clarke ( https://github.com/rogerclarkmelbourne ) 
@@ -189,8 +189,14 @@ https://www.tayloredge.com/reference/Electronics/RF/0242.pdf
 
 This video from [The Signal Path](https://www.youtube.com/user/TheSignalPathBlog/featured) explains the operation of a similar module (CDM324) in great detail:  https://www.youtube.com/watch?v=5vqSX40seqA
 
+This video from DroneBot Workshop is a good tutorial specifically for the RCWL-0516 module:
+https://www.youtube.com/watch?v=IJoPkKlxFXA  (thanks for that tip [underwoodblog](https://github.com/underwoodblog) !)
+
+
 
 ## Updates
+
+14 May 2019: More main page content updates.
 
 21 Aug 2018: Added link to The Signal Path video explaing operation of similar module:
  https://www.youtube.com/watch?v=5vqSX40seqA
