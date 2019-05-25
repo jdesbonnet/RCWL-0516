@@ -192,7 +192,8 @@ This video from [The Signal Path](https://www.youtube.com/user/TheSignalPathBlog
 This video from DroneBot Workshop is a good tutorial specifically for the RCWL-0516 module:
 https://www.youtube.com/watch?v=IJoPkKlxFXA  (thanks for that tip [underwoodblog](https://github.com/underwoodblog) !)
 
-
+A video from Big Clive "How microwave body detectors work. With RF section schematic."
+https://www.youtube.com/watch?v=Hf19hc9PtcE (again thanks to [underwoodblog](https://github.com/underwoodblog) )
 
 ## Updates
 
